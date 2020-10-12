@@ -7,21 +7,37 @@ import faker from 'faker';
 const App = () => {
     // naive approach
     return (
-        <div className="ui container comments">
-            <ApprovalCard />
-            <CommentDetail
-                author="Korra"
-                avatar={faker.image.avatar()}
-                date="10/13/2019"
-                text="I understand Kuvira"
-            />
-            <CommentDetail
-                author="Aang"
-                avatar={faker.image.avatar()}
-                date="12/25/2008"
-                text="Can we go penguin sledding?"
-            />
-            <ApprovalCard />
+        <div className="ui container comments" style={{marginTop: "2rem"}}>
+            <ApprovalCard>
+                <div>
+                    <h4 style={{margin: ".75rem 0"}}>Warning!</h4>
+                    Are you sure you want to do this?
+                </div>
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="Tenzin"
+                    avatar={faker.image.avatar()}
+                    date="Today at 6:00PM"
+                    text="Nice Blog post!"
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="Korra"
+                    avatar={faker.image.avatar()}
+                    date="10/13/2019"
+                    text="I understand Kuvira"
+                />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail
+                    author="Aang"
+                    avatar={faker.image.avatar()}
+                    date="12/25/2008"
+                    text="Can we go penguin sledding?"
+                />
+            </ApprovalCard>
         </div>
     );
 };
